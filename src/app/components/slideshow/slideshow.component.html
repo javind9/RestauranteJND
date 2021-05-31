@@ -1,0 +1,24 @@
+<!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <img class="card-img-top" src="assets/img/imagen1.jpg" alt="imagen1">
+        </div>
+        <div class="swiper-slide">
+            <img class="card-img-top" src="assets/img/imagen2.jpg" alt="imagen2">
+        </div>
+        <div class="swiper-slide">
+            <img class="card-img-top" src="assets/img/imagen3.jpg" alt="imagen3">
+        </div>
+        ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div (click)="onSlidePrev()" class="swiper-button-prev"></div>
+    <div (click)="onSlideNext()" class="swiper-button-next"></div>
+
+</div>

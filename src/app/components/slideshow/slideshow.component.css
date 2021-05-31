@@ -1,0 +1,13 @@
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+}
+
+.swiper-wrapper {
+    background-size: cover;
+}

@@ -8,6 +8,7 @@ import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
 import { CartaComponent } from './components/carta/carta.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from './app.routes';
+import { SlideshowComponent } from './components/slideshow/slideshow.component';
 
 //Importar Rutas
 
@@ -19,7 +20,8 @@ import { ROUTES } from './app.routes';
     InicioComponent,
     UbicacionComponent,
     CartaComponent,
-    NavbarComponent
+    NavbarComponent,
+    SlideshowComponent
   ],
   imports: [
     BrowserModule,
