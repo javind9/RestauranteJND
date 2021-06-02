@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-title>Ubicación del restaurante</mat-card-title>
+    <mat-card-content>
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+            <agm-marker [latitude]="lat" [longitude]="lng">
+                <agm-info-window>
+                    <strong>RestauranteJND</strong>
+                </agm-info-window>
+            </agm-marker>
+
+        </agm-map>
+    </mat-card-content>
+</mat-card>

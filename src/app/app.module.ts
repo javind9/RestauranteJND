@@ -10,7 +10,13 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from './app.routes';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 
-//Importar Rutas
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Angular material
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { MatCardModule } from '@angular/material/card';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -21,11 +27,19 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
     UbicacionComponent,
     CartaComponent,
     NavbarComponent,
-    SlideshowComponent
+    SlideshowComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot( ROUTES, { useHash: true } )
+    RouterModule.forRoot( ROUTES, { useHash: true } ),
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule,
+    AgmCoreModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBUZ984y-uy8Wc5IGCo3wpOwPuHdrMptCI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
