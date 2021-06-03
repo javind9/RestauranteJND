@@ -1,17 +1,8 @@
 body {
     background-color: #14161E;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1 {
     font-weight: 200;
-    color: white;
-}
-
-p {
     color: white;
 }
 
@@ -38,4 +29,8 @@ hr {
 
 .block {
     display: block;
+}
+
+.navbar-expand-sm{
+    color: white;
 }

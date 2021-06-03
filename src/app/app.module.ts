@@ -17,7 +17,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { MatCardModule } from '@angular/material/card';
 import { AgmCoreModule } from '@agm/core';
+import { ProductoComponent } from './components/producto/producto.component';
 
+//Servicios
+import { ProductosService } from './productos.service';
+import { BuscadorComponent } from './components/buscador/buscador.component';
 
 
 @NgModule({
@@ -28,7 +32,9 @@ import { AgmCoreModule } from '@agm/core';
     CartaComponent,
     NavbarComponent,
     SlideshowComponent,
-    MapaComponent
+    MapaComponent,
+    ProductoComponent,
+    BuscadorComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,7 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyBUZ984y-uy8Wc5IGCo3wpOwPuHdrMptCI'
     })
   ],
-  providers: [],
+  providers: [ProductosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

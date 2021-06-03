@@ -27,7 +27,7 @@
 
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" #buscarTexto>
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar en la carta
+            <button (click)="buscarProducto(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar en la carta
             </button>
         </form>
 
