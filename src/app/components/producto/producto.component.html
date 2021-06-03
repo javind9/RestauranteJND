@@ -1,16 +1,16 @@
-
-<h1>Platos</h1>
+<h1>
+    Platos</h1>
 <hr>
 
 <div class="card-columns">
     <div class="card animated fadeIn fast" style="width: 18rem;" *ngFor="let plato of platos">
         <img height="200" width="630" src="{{plato.imagen}}" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title">{{plato.nombre}}</h5>
-          <p class="card-text">{{plato.precio}}€</p>
-          <a (click)="addCarrito()" class="btn btn-primary btn-block">Añadir a la cesta</a>
+            <h5 class="card-title">{{plato.nombre}}</h5>
+            <p class="card-text">{{plato.precio}}€</p>
+            <a class="btn btn-primary btn-block">Añadir a la cesta</a>
         </div>
-      </div>
+    </div>
 </div>
 
 <hr>
@@ -22,11 +22,11 @@
     <div class="card animated fadeIn fast" style="width: 18rem;" *ngFor="let bebida of bebidas">
         <img height="200" width="630" src="{{bebida.imagen}}" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title">{{bebida.nombre}}</h5>
-          <p class="card-text">{{bebida.precio}}€</p>
-          <a href="#" class="btn btn-primary btn-block">Añadir a la cesta</a>
+            <h5 class="card-title">{{bebida.nombre}}</h5>
+            <p class="card-text">{{bebida.precio}}€</p>
+            <a href="#" class="btn btn-primary btn-block">Añadir a la cesta</a>
         </div>
-      </div>
+    </div>
 </div>
 
 <hr>
@@ -38,9 +38,9 @@
     <div class="card animated fadeIn fast" style="width: 18rem;" *ngFor="let postre of postres">
         <img height="200" width="630" src="{{postre.imagen}}" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title">{{postre.nombre}}</h5>
-          <p class="card-text">{{postre.precio}}€</p>
-          <a href="#" class="btn btn-primary btn-block">Añadir a la cesta</a>
+            <h5 class="card-title">{{postre.nombre}}</h5>
+            <p class="card-text">{{postre.precio}}€</p>
+            <a href="#" class="btn btn-primary btn-block">Añadir a la cesta</a>
         </div>
-      </div>
+    </div>
 </div>

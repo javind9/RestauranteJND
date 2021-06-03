@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CarritoService } from 'src/app/carrito.service';
-import { ProductosService } from 'src/app/productos.service';
+import { Component, Input, OnInit } from '@angular/core';
+import {ProductosService } from 'src/app/productos.service';
+import { ProductoModel } from '../models/producto.model';
 
 @Component({
   selector: 'app-producto',
@@ -9,21 +9,34 @@ import { ProductosService } from 'src/app/productos.service';
 })
 export class ProductoComponent implements OnInit {
 
-  platos: any[] = [];
-  bebidas: any[] = [];
-  postres: any[] = [];
+  platos: ProductoModel[] = [];
+  bebidas: ProductoModel[] = [];
+  postres: ProductoModel[] = [];
 
-  constructor(private _productosService:ProductosService, private _carritoService:CarritoService) { }
+  producto = new ProductoModel();
+
+  // platos: any[] = [];
+  // bebidas: any[] = [];
+  // postres: any[] = [];
+
+  constructor(private _productosService:ProductosService) { }
 
   ngOnInit() {
-    this.platos = this._productosService.getPlatos();
-    this.bebidas = this._productosService.getBebidas();
-    this.postres = this._productosService.getPostres();
+    //this.platos = this._productosService.getPlatos();
+    //this.bebidas = this._productosService.getBebidas();
+    //this.postres = this._productosService.getPostres();
 
-  }
+    this._productosService.getPlatos().subscribe( resp =>{
+      this.platos = resp;
+    });
+    
+    this._productosService.getBebidas().subscribe( resp =>{
+      this.bebidas = resp;
+    });
+    this._productosService.getPostres().subscribe( resp =>{
+      this.postres = resp;
+    });
 
-  addCarrito(){
-    this._carritoService.addProducto(this.producto);
   }
 
 }
