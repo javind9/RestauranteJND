@@ -52,13 +52,4 @@ export class ProductoComponent implements OnInit {
       
     });
   }
-
-  // anadirPostre(nombre: string, precio: number){
-  //   // this._productosService.crearProducto(nombre, precio).subscribe( resp =>  {
-  //   //   console.log(resp);
-  //   // });
-  // }
-
-
-
 }
