@@ -18,4 +18,10 @@ export class CarritoComponent implements OnInit {
     });
   }
 
+
+  borrarProducto(producto: ProductoModel, i: number){
+    this.productos.splice(i, 1);
+    this._productosService.borrarProducto(producto.id).subscribe();
+  }
+
 }
