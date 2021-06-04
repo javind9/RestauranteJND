@@ -11,6 +11,7 @@ import { ROUTES } from './app.routes';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 //Angular material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -22,6 +23,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 //Servicios
 import { ProductosService } from './productos.service';
 import { BuscadorComponent } from './components/buscador/buscador.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     SlideshowComponent,
     MapaComponent,
     ProductoComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBUZ984y-uy8Wc5IGCo3wpOwPuHdrMptCI'
     }),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ProductosService],
   bootstrap: [AppComponent]

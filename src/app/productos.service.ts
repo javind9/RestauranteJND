@@ -8,6 +8,7 @@ import { ProductoModel } from './components/models/producto.model';
 export class ProductosService {
 
     private url = 'https://restaurante-fd301-default-rtdb.firebaseio.com/productos';
+    private urlCarrito = 'https://restaurante-fd301-default-rtdb.firebaseio.com/carrito';
 
     //Array para la búsqueda de productos en la carta
     private productos: any[] = [
@@ -289,6 +290,16 @@ export class ProductosService {
         return this.http.get(`${this.url}/postres.json`).pipe(
             map(this.crearArreglo)
         );
+    }
+
+    getCarrito(){
+        return this.http.get(`${this.urlCarrito}.json`).pipe(
+            map(this.crearArreglo)
+        );
+    }
+
+    crearProducto(producto: ProductoModel){
+        return this.http.post(`${this.urlCarrito}.json`, producto);
     }
 
 

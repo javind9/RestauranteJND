@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import {ProductosService } from 'src/app/productos.service';
 import { ProductoModel } from '../models/producto.model';
 
@@ -13,19 +14,13 @@ export class ProductoComponent implements OnInit {
   bebidas: ProductoModel[] = [];
   postres: ProductoModel[] = [];
 
-  producto = new ProductoModel();
+  
 
-  // platos: any[] = [];
-  // bebidas: any[] = [];
-  // postres: any[] = [];
+
 
   constructor(private _productosService:ProductosService) { }
 
   ngOnInit() {
-    //this.platos = this._productosService.getPlatos();
-    //this.bebidas = this._productosService.getBebidas();
-    //this.postres = this._productosService.getPostres();
-
     this._productosService.getPlatos().subscribe( resp =>{
       this.platos = resp;
     });
@@ -38,5 +33,32 @@ export class ProductoComponent implements OnInit {
     });
 
   }
+
+  anadirPlato(producto: ProductoModel){
+
+    this._productosService.crearProducto(producto).subscribe( resp =>  {
+      
+    });
+  }
+
+  anadirBebida(producto: ProductoModel){
+    this._productosService.crearProducto(producto).subscribe( resp =>  {
+      
+    });
+  }
+
+  anadirPostre(producto: ProductoModel){
+    this._productosService.crearProducto(producto).subscribe( resp =>  {
+      
+    });
+  }
+
+  // anadirPostre(nombre: string, precio: number){
+  //   // this._productosService.crearProducto(nombre, precio).subscribe( resp =>  {
+  //   //   console.log(resp);
+  //   // });
+  // }
+
+
 
 }

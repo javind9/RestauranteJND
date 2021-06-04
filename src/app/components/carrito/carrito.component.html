@@ -1,0 +1,23 @@
+<h1>Carrito de la compra</h1>
+<hr>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Tools</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let producto of productos; let i = index">
+            <th scope="row">{{ i + 1}}</th>
+            <td>{{ producto.nombre }}€</td>
+            <td>{{ producto.precio }}€</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
